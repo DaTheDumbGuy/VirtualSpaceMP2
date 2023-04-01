@@ -659,6 +659,9 @@ body.dark-theme {
 }
 
 .contact__card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--body-color);
   border: 2px solid var(--border-color);
   padding: 1.25rem .75rem;
