@@ -87,6 +87,7 @@ class ValidateForm {
 					savedData.push(formData);
 					localStorage.setItem('Accounts', JSON.stringify(savedData));
 					alert('Form submitted successfully!');
+					selfForm.form.reset();
 				}
 			}
 		});
