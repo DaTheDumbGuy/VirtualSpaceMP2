@@ -669,6 +669,7 @@ body.dark-theme {
 .contact__card-info {
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
   column-gap: .75rem;
   margin-bottom: 1.25rem;
 }
