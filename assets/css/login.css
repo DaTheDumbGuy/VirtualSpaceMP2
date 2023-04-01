@@ -99,7 +99,10 @@ input {
 	margin: 8px 0;
 	width: 100%;
 }
-
+.errorMsg{
+	display: block;
+	height: 15px ;
+}
 .container {
 	background-color: var(--first-color-lighten);
 	border-radius: 10px;
