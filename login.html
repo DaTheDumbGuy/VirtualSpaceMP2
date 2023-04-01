@@ -15,30 +15,30 @@
     <div class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#" id="registration-form">
-          <h1>Create Account</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <h1 style="margin-bottom: 20px">Create Account</h1>
+          <!-- <div class="social-container">
+            <a href="#" class="social"><i class="bx bxl-facebook"></i></a>
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <span>or use your email for registration</span>
+          </div> -->
+          <!-- <span>or use your email for registration</span> -->
           <input type="text" id="reg-name" placeholder="Name" />
-          <span class="errorMsg"></span>
+          <span class="error-message"></span>
           <input type="email" id="reg-email" placeholder="Email" />
-          <span class="errorMsg"></span>
+          <span class="error-message"></span>
           <input type="password" id="reg-password" placeholder="Password" />
-          <span class="errorMsg"></span>
+          <span class="error-message"></span>
           <input
             type="password"
             id="reg-confirmPassword"
             placeholder="Confirm Password"
           />
-          <span class="errorMsg"></span>
+          <span class="error-message"></span>
           <button type="submit">Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form action="#">
+        <form id="login-form" action="#">
           <h1>Sign in</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="bx bxl-facebook"></i></a>
@@ -46,12 +46,12 @@
             <a href="#" class="social"><i class="bx bxl-linkedin"></i></a>
           </div>
           <span>or use your account</span>
-          <input type="email" placeholder="Email" />
-          <span></span>
-          <input type="password" placeholder="Password" />
-          <span></span>
+          <input id="login-email" type="email" placeholder="Email" />
+          <span id="login-email-error"></span>
+          <input id="login-password" type="password" placeholder="Password" />
+          <span id="login-password-error"></span>
           <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
+          <button id="login-button">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">

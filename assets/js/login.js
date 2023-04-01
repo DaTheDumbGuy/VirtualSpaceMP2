@@ -9,7 +9,7 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
-
+// Form validation for register
 class ValidateForm {
 	constructor(form, fields) {
 		this.form = form;
@@ -101,9 +101,35 @@ class ValidateForm {
 		return formData;
 	}
 }
-
+// Execution
 let form = document.querySelector("#registration-form");
 let fields = ['reg-name', 'reg-email', 'reg-password', 'reg-confirmPassword'];
 let newAccount = new ValidateForm(form, fields);
 
 newAccount.initializeForm();
+
+// Check if there's a user matched by the inputted letter
+let loginForm = document.querySelector("#login-form");
+let loginEmailInput = document.querySelector("#login-email");
+let loginPasswordInput = document.querySelector("#login-password");
+let loginEmailErrorSpan = document.querySelector("#login-email-error");
+let loginPasswordErrorSpan = document.querySelector("#login-password-error");
+
+loginForm.addEventListener("submit", (event) => {
+	event.preventDefault();
+
+	let savedData = JSON.parse(localStorage.getItem("Accounts")) || [];
+	let existingAccount = savedData.find(
+		(account) =>
+			account["reg-email"] === loginEmailInput.value &&
+			account["reg-password"] === loginPasswordInput.value
+	);
+
+	if (existingAccount) {
+		alert("Login successful!");
+		// do something after successful login, e.g. redirect to another page
+	} else {
+		loginEmailErrorSpan.innerText = "Invalid email or password";
+		loginPasswordErrorSpan.innerText = "Invalid email or password";
+	}
+});
