@@ -1,13 +1,33 @@
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
+const loginForm = document.querySelector("#login-form");
+const registrationForm = document.querySelector('#registration-form');
+
+function resetRegErrorMessages() {
+	const errorMessages = document.querySelectorAll('.error-message');
+	errorMessages.forEach(errorMessage => errorMessage.innerText = '');
+}
+
+function resetLoginErrorMessages() {
+	const emailError = document.querySelector('#login-email-error');
+	const passError = document.querySelector('#login-password-error');
+
+	emailError.innerText = '';
+	passError.innerText = '';
+
+}
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
+	loginForm.reset();
+	resetLoginErrorMessages();
 });
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
+	registrationForm.reset();
+	resetRegErrorMessages();
 });
 // Form validation for register
 class ValidateForm {
@@ -115,7 +135,6 @@ let newAccount = new ValidateForm(form, fields);
 newAccount.initializeForm();
 
 // Check if there's a user matched by the inputted letter
-let loginForm = document.querySelector("#login-form");
 let loginEmailInput = document.querySelector("#login-email");
 let loginPasswordInput = document.querySelector("#login-password");
 let loginEmailErrorSpan = document.querySelector("#login-email-error");
