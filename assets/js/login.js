@@ -3,6 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 const loginForm = document.querySelector("#login-form");
 const registrationForm = document.querySelector('#registration-form');
+let isLoggedIn = false;
 
 function resetRegErrorMessages() {
 	const errorMessages = document.querySelectorAll('.error-message');
@@ -153,9 +154,14 @@ loginForm.addEventListener("submit", (event) => {
 	if (existingAccount) {
 		alert("Login successful!");
 		// do something after successful login, e.g. redirect to another page
-		window.location.href = "../index.html";
+		window.location.href = "index.html";
+		isLoggedIn = true;
+		localStorage.setItem('isLoggedIn', isLoggedIn);
 	} else {
 		loginEmailErrorSpan.innerText = "Invalid email or password";
 		loginPasswordErrorSpan.innerText = "Invalid email or password";
 	}
 });
+
+// Set the value in localStorage to check if loggedin
+localStorage.setItem('isLoggedIn', isLoggedIn);	

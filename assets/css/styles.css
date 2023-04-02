@@ -412,7 +412,7 @@ body.dark-theme {
   box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
 }
 
-.nav__button {
+#account {
   display: none;
 }
 
@@ -1045,7 +1045,7 @@ body.dark-theme {
   .nav__link i {
     display: none;
   }
-  .nav__button {
+  #account{
     display: inline-block;
   }
 
