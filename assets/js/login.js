@@ -77,19 +77,24 @@ class ValidateForm {
 				let formData = selfForm.getData();
 
 				let savedData = JSON.parse(localStorage.getItem('Accounts')) || [];
+
 				let existingNames = savedData.map(account => account['reg-name']);
 				let existingEmails = savedData.map(account => account['reg-email']);
+
 				if (existingNames.includes(formData['reg-name'])) {
 					alert('An account with this name already exists!');
 				} else if (existingEmails.includes(formData['reg-email'])) {
 					alert('An account with this email already exists!');
 				} else {
+					const id = Date.now() + Math.floor(Math.random() * 1000); // generate a unique ID
+					formData.id = id; // add ID to the form data
 					savedData.push(formData);
 					localStorage.setItem('Accounts', JSON.stringify(savedData));
 					alert('Form submitted successfully!');
 					selfForm.form.reset();
 				}
 			}
+
 		});
 	}
 
@@ -128,6 +133,7 @@ loginForm.addEventListener("submit", (event) => {
 	if (existingAccount) {
 		alert("Login successful!");
 		// do something after successful login, e.g. redirect to another page
+		window.location.href = "../index.html";
 	} else {
 		loginEmailErrorSpan.innerText = "Invalid email or password";
 		loginPasswordErrorSpan.innerText = "Invalid email or password";
