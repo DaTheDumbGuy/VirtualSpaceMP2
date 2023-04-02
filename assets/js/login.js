@@ -153,7 +153,6 @@ loginForm.addEventListener("submit", (event) => {
 
 	if (existingAccount) {
 		alert("Login successful!");
-		// do something after successful login, e.g. redirect to another page
 		window.location.href = "index.html";
 		isLoggedIn = true;
 		localStorage.setItem('isLoggedIn', isLoggedIn);

@@ -275,3 +275,17 @@ footer a {
     text-decoration: none;
 }
 
+@media screen and (max-width:520px){	
+	body{
+		zoom: 0.8;
+	}
+	.container{
+		width: 100%;
+	}
+	form{
+		padding: 0 20px;
+	}
+	.overlay-panel{
+		padding: 0 10px;
+	}
+}

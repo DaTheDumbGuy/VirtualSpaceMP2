@@ -134,12 +134,44 @@ sr.reveal(`.value__images, .contact__content`, { origin: 'left' })
 sr.reveal(`.value__content, .contact__images`, { origin: 'right' })
 
 // Test
+function hireSpacer() {
+    if (localStorage.getItem('isLoggedIn') === 'false') {
+        window.location.href = "login.html";
+    } else {
+        alert("You are logged in, gotta do something about this shit. Where to go?");
+    }
+}
+function subscribeButton() {
+    if (localStorage.getItem('isLoggedIn') === 'false') {
+        window.location.href = "login.html";
+    } else {
+        alert("You are logged in, gotta do something about this subscribe shit. What to do?");
+    }
+}
 // Check if the user is logged in
 if (localStorage.getItem('isLoggedIn') === 'true') {
     // Do something here
-    alert("You are logged in");
+    // alert("You are logged in");
+    const subscribe = document.querySelector('.subscribe__button');
+    subscribe.textContent = "Subscribe";
+    const loginBtn = document.querySelector('.nav__button');
+    loginBtn.style.display = 'none'
 
+    function toggleDropdown() {
+        const accountDropdown = document.querySelector('#accountDropdown');
+        accountDropdown.classList.toggle("active");
+    }
+    function logout() {
+        localStorage.setItem('isLoggedIn', false);
+        location.reload();
+    }
+
+} else {
+    const accountProfile = document.querySelector('#account');
+    accountProfile.style.display = 'none';
 }
+
+
 
 
 

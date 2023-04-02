@@ -59,14 +59,26 @@
                 <i class="bx bx-phone"></i>
               </a>
             </li>
+            <li class="nav__item" id="account">
+              <div id="accountProfile" class="nav__link">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                  alt=""
+                  onclick="toggleDropdown()"
+                />
+                <ul id="accountDropdown" class="dropdown-content">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
 
         <!-- Theme change button -->
         <i class="bx bx-moon change-theme" id="theme-button"></i>
-        <div id="account" class="account-menu">
-          <a href="login.html" class="nav__button button">Log In</a>
-        </div>
+        <a href="login.html" class="nav__button button">Log In</a>
       </nav>
     </header>
 
@@ -87,11 +99,7 @@
               innovative web solutions.
             </p>
 
-            <form action="#" class="home__search">
-              <button class="button">
-                <a href="login.html">Hire A Spacer</a>
-              </button>
-            </form>
+            <button class="button" onclick="hireSpacer()">Hire A Spacer</button>
           </div>
 
           <div class="home__images">
@@ -412,7 +420,9 @@
             Virtual space is made possible by technologies such as virtual
             reality.
           </p>
-          <a href="login.html" class="button subscribe__button"> Sign Up </a>
+          <button class="button subscribe__button" onclick="subscribeButton()">
+            Sign Up
+          </button>
         </div>
       </section>
     </main>
