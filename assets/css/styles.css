@@ -123,7 +123,6 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in dark theme 
 */
-.dark-theme .home__search,
 .dark-theme .swiper-button-next,
 .dark-theme .swiper-button-prev {
   border: 3px solid var(--border-color);
@@ -904,7 +903,13 @@ body.dark-theme {
     justify-content: center;
   }
 }
-
+/* for Contact card */
+@media screen and (max-width:450px){
+  .contact__card {
+    grid-template-columns: repeat(1, 100%);
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 320px) {
   .nav__menu {
     padding: 1.3rem 1.5rem;
@@ -961,10 +966,10 @@ body.dark-theme {
     width: 412px;
   }
 
-  .contact__card {
+  /* .contact__card {
     grid-template-columns: repeat(2, 192px);
     justify-content: center;
-  }
+  } */
 
   .footer__content {
     grid-template-columns: repeat(3, max-content);
@@ -1160,7 +1165,7 @@ body.dark-theme {
   .subscribe__container {
     padding: 4rem 10rem 4.5rem;
     border-radius: 2rem;
-    border: 12px solid var(--first-color-light);
+    /* border: 12px solid var(--first-color-light); */
   }
   .subscribe__title {
     font-size: 2.5rem;

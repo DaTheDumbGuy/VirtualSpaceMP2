@@ -37,9 +37,10 @@ class ValidateForm {
 
 		if (field.value.trim() === '') {
 			errorMessage = 'This field is required';
-
 		} else if (field.type === 'text' && field.value.length < 4) {
 			errorMessage = 'Should be more than 4 letters';
+		} else if (field.type === 'text' && /[^\w\s]/gi.test(field.value)) {
+			errorMessage = 'Special characters are not allowed';
 		}
 
 		if (field.type === 'email' && !this.isValidEmail(field.value)) {
