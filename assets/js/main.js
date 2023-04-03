@@ -179,6 +179,11 @@ if (localStorage.getItem('isLoggedIn') === 'true') {
 
 
 
+const emailBtn = document.getElementById("emailBtn");
 
-
+emailBtn.addEventListener("click", () => {
+    const subject = "Greetings!";
+    const body = "Hi there, Thank you for reaching out!";
+    window.location.href = `mailto:St.dessaVirtualSpace@gmail.com?subject=${subject}&body=${body}`;
+});
 

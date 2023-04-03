@@ -163,4 +163,5 @@ loginForm.addEventListener("submit", (event) => {
 });
 
 // Set the value in localStorage to check if loggedin
-localStorage.setItem('isLoggedIn', isLoggedIn);	
+localStorage.setItem('isLoggedIn', isLoggedIn);
+
