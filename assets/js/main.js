@@ -148,6 +148,12 @@ function subscribeButton() {
         alert("You are logged in, gotta do something about this subscribe shit. What to do?");
     }
 }
+function dessaPortfolio() {
+    window.location.href = "https://dessacdv.github.io/portfolio/";
+}
+function darylPortfolio() {
+    window.location.href = "https://dathedumbguy.github.io/Portfolio/";
+}
 // Check if the user is logged in
 if (localStorage.getItem('isLoggedIn') === 'true') {
     // Do something here
