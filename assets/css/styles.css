@@ -79,7 +79,13 @@ h1, h2, h3 {
 ul {
   list-style: none;
 }
-
+#accountDropdown li a{
+  color: var(--text-color);
+}
+#accountDropdown{
+  border: 3px solid var(--border-color);
+  background-color: var(--container-color);
+}
 a {
   text-decoration: none;
 }
@@ -124,7 +130,8 @@ body.dark-theme {
     the website, in dark theme 
 */
 .dark-theme .swiper-button-next,
-.dark-theme .swiper-button-prev {
+.dark-theme .swiper-button-prev, 
+.dark-theme #accountDropdown {
   border: 3px solid var(--border-color);
 }
 
@@ -147,7 +154,8 @@ body.dark-theme {
 .dark-theme .contact__orbe,
 .dark-theme .contact__card i,
 .dark-theme .contact__card-button,
-.dark-theme .subscribe__container {
+.dark-theme .subscribe__container,
+.dark-theme #accountDropdown {
   background-color: var(--container-color);
 }
 
